@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "twich.tv-ovinnn_", "twich.tv-ovinnn_\twich.tv-ovinnn_.csproj", "{E106C314-79C2-4DE9-A9BB-919464265B78}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E106C314-79C2-4DE9-A9BB-919464265B78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E106C314-79C2-4DE9-A9BB-919464265B78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E106C314-79C2-4DE9-A9BB-919464265B78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E106C314-79C2-4DE9-A9BB-919464265B78}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {30BAB767-AF26-4348-BB2C-3E12204B5F28}
+	EndGlobalSection
+EndGlobal
