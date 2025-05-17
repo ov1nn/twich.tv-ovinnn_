@@ -1,0 +1,41 @@
+﻿@using twich.tv_ovinnn_.Data
+@model Student
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<div class="login-container">
+    <form method="post" asp-controller="AddStudent" asp-action="CreateStudent">
+        <div class="mb-3">
+            <label class="form-label" asp-for="Username"></label>
+            <input asp-for="Username" class="form-control"  />
+        </div>
+        <div class="mb-3">
+            <label class="form-label" asp-for="Surname"></label>
+            <input asp-for="Surname" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" asp-for="MiddleName"></label>
+            <input asp-for="MiddleName" class="form-control"  />
+        </div>   
+        <div class="mb-3">
+            <label class="form-label" asp-for="BirthDay"></label>
+            <input asp-for="BirthDay" type="date" class="form-control" />
+        </div>
+                
+                
+        @{
+            var groups = new SelectList(ViewBag.Groups, "Id", "Name");
+        }
+        <div class="mb-3">
+            <label class="form-label" asp-for="Group"></label>
+            <select asp-for="Group" class="form-select" asp-items="groups">
+            </select>
+        </div>
+                
+        <button type="submit" class="btn btn-light">Добавить студента</button>
+    </form>
+</div>
+
+

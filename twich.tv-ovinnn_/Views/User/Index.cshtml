@@ -1,0 +1,65 @@
+﻿@using twich.tv_ovinnn_.Data
+@model Group
+
+<h1>User Management</h1>
+
+<div>
+    <h2>Group List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var group in ViewBag.groups)
+            {
+                <tr>
+                    <td>@group.Id</td>
+                    <td>@group.Name</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <form method="post" asp-controller="User" asp-action="CreateGroup">
+        <input name="Name" type="text" placeholder="Group Name" />
+        <button type="submit">Add Group</button>
+    </form>
+</div>
+
+<div>
+    <h2>Student List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Username</th>
+                <th>Surname</th>
+                <th>MiddleName</th>
+                <th>BirthDay</th>
+                <th>GroupId</th>
+                <th>Group Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var stud in ViewBag.students)
+            {
+                <tr>
+                    <td>@stud.Id</td>
+                    <td>@stud.Username</td>
+                    <td>@stud.Surname</td>
+                    <td>@stud.MiddleName</td>
+                    <td>@stud.BirthDay.ToString("dd.MM.yyyy")</td>
+                    <td>@stud.GroupId</td>
+                    <td>@(stud.Group != null ? stud.Group.Name : "No Group")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <form method="post" asp-controller="AddStudent" asp-action="Index">
+        <button type="submit">Add Student</button>
+    </form>
+</div>

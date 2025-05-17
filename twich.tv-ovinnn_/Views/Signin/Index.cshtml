@@ -1,0 +1,28 @@
+﻿@model Signin
+@{
+    ViewData["Title"] = "Sign in the system";
+}
+
+<h1 class="header">Sign In</h1>
+<div class="login-container">
+    <form method="post" asp-controller="Signin" asp-action="Check">
+        <div class="input-group">
+            <label asp-for="Username">Username</label>
+            <input asp-for="Username" type="text" placeholder="Enter username" />
+            <span asp-validation-for="Username" data-valmsg-for="Username"></span>
+        </div>
+
+        <div class="input-group">
+            <label asp-for="Password">Password</label>
+            <input asp-for="Password" type="password" placeholder="Enter password" />
+            <span asp-validation-for="Password" data-valmsg-for="Password"></span>
+        </div>
+
+        <div class="input-group">
+            <button type="submit" class="btn">Submit</button>
+        </div>
+
+        <div asp-validation-summary="ModelOnly" class="validation-summary">
+        </div>
+    </form>
+</div>

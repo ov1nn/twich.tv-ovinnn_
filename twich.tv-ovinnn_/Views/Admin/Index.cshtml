@@ -1,0 +1,30 @@
+﻿@using twich.tv_ovinnn_.Data
+@model User
+
+<h1 class="header">User List</h1>
+<div class="container-fluid">
+    <div class="table-container">
+        <h2 class="header">Список пользователей</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Password</th>
+                    <th scope="col">IsAdmin</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in ViewBag.users)
+                {
+                    <tr>
+                        <td>@user.Id</td>
+                        <td>@user.Username</td>
+                        <td>@user.Password</td>
+                        <td>@user.IsAdmin</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
